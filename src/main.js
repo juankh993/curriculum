@@ -198,7 +198,7 @@ function experienceData (experienceJobs) {
     company.textContent = experienceItem.company;
     role.textContent = experienceItem.job;
     area.textContent = experienceItem.area;
-    timeWorked.textContent = experienceItem.direction;
+    timeWorked.textContent = experienceItem.duration;
     lead.textContent = experienceItem.lead;
     phone.textContent = experienceItem.phone;
     functionsJob.textContent = experienceItem.functions;
@@ -218,7 +218,7 @@ leftExperience.addEventListener("click", function(){
 
 rightExperience.addEventListener("click", function(){
     experienceJobs++;
-    if (experienceJobs > studies.length - 1) {
+    if (experienceJobs > experience.length - 1) {
         experienceJobs = 0;
     }
     experienceData(experienceJobs);
