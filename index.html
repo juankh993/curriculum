@@ -16,7 +16,7 @@
         </div>
         <div class="links">
             <button id="open-button" class="nav-button">
-                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="0" height="0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
                     <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round" />
                     <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round" />
@@ -25,7 +25,7 @@
             
                 <div class="buttons-container">
                     <button id="close-button" class="nav-button">
-                      <svg fill="#000000" width="800px" height="800px" viewBox="0 0 64 64" version="1.1"
+                      <svg fill="#000000" width="0" height="0" viewBox="0 0 64 64" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             xml:space="preserve"
                             style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
@@ -48,13 +48,12 @@
         <div class="separator"></div>
     <section>
         <div class="photo-profile">
-            <img src="https://placehold.co/150x150" alt="perfil">
+            <img src="./public/img/profile.png" alt="perfil">
             <div>
-            <p>NOMBRE</p>
-            <p>cc</p>
-            <p>telefono</p>
-            <p>email</p>
-            <p>residencia</p>
+            <p>Juan Carlos Hincapie Garzon</p>
+            <p>1.143.848.198</p>
+            <p>3177058066</p>
+            <p><a href="mailto:juankh993@gmail.com.com" target="_blank">juankh993@gmail.com</a></p>
         </div>
         </div>
     </section>
@@ -75,20 +74,17 @@
         <div class="title-studies" id="studies">
             <p class="underline-titles">Estudios</p>
         </div>
-        <!-- <div class="img-experience-company">
-            <img src="https://placehold.co/100x100" alt="logo-company">
-        </div> -->
-        <div>
-            <p>Lugar de estudio: Servicio Nacional de Aprendizaje- SENA</p>
-            <p>Titulo obtenido: Tecnologo en Análisis y Desarrollo de Sistemas de Información.</p>
-            <p>Duración: Abril 2024 - Culminado</p>
-            <p>Lugar de estudio: Bogotá D.C., Colombia.</p>
+        <div id="data-studies" class="data">
+            <p id="university">Servicio Nacional de Aprendizaje - SENA</p>
+            <p id="certificate">Tecnologo en Análisis y Desarrollo de Sistemas de Información.</p>
+            <p id="duration">Abril 2024 - Culminado</p>
+            <p id="city-certificate">Bogotá D.C., Colombia.</p>
             <div class="buttons-arrows">
-                <button>
+                <button id="arrow-left">
                     <!--Arrow left-->
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-4.828 11.5l4.608 3.763-.679.737-6.101-5 6.112-5 .666.753-4.604 3.747h11.826v1h-11.828z"/></svg>
                 </button>
-                <button>
+                <button id="arrow-right">
                     <!--Arrow right-->
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c-6.623 0-12 5.377-12 12s5.377 12 12 12 12-5.377 12-12-5.377-12-12-12zm0 1c-6.071 0-11 4.929-11 11s4.929 11 11 11 11-4.929 11-11-4.929-11-11-11zm4.828 11.5l-4.608 3.763.679.737 6.101-5-6.112-5-.666.753 4.604 3.747h-11.826v1h11.828z"/></svg>
                 </button>
@@ -100,27 +96,24 @@
     <section class="section-experience" id="experience">
         <div class="experience">
         <div class="title-experience">
-            <p class="underline-titles">Experiencia Laboral</p>
+            <h3 class="underline-titles">Experiencia Laboral</h3>
         </div>
-        <div class="img-experience-company">
-            <img src="https://placehold.co/100x100" alt="logo-company">
-        </div>
-        <div>
-            <p>Empresa: Nombre empresa</p>
-            <p>Cargo: cargo</p>
-            <p>Área de trabajo: Area</p>
-            <p>Duración: enero 2022 - mayo 2023</p>
-            <p>Jefe Inmediato: Edwin José Parra</p>
-            <p>Teléfono: 3133330780</p>
+        <div id="data-jobs">
+            <p id="company">FLARE SAS</p>
+            <p id="role">HTML Developer</p>
+            <p id="area-job">Desarrollo de software</p>
+            <p id="time-worked">mayo 2023 - actualmente</p>
+            <p id="lead">Andres Barreto</p>
+            <p id="phone">3298181</p>
             <p class="labors underline-titles">Funciones:</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus delectus non, possimus at, dolores excepturi officiis inventore sint itaque, velit nobis corrupti? Ducimus reiciendis alias dolorum repellat aliquam velit dolores?</p>
+            <p id="functions">Escribir código semántico y estructurado en HTML para definir la estructura de una página web. 2. Estilizar las páginas web utilizando hojas de estilo en cascada (CSS) para lograr el diseño deseado. 3. Implementar la lógica del lado del cliente utilizando JavaScript para mejorar la interactividad y la experiencia del usuario. 4. Garantizar la compatibilidad entre diferentes navegadores y dispositivos. 5. Utilizar frameworks front-end (marco de trabajo) como Tailwind, Bootstrap y/o flowbite para facilitar el desarrollo y mejorar la eficiencia.  6. Diseñar y desarrollar sitios web que se adapten y sean funcionales en dispositivos y diferentes pantallas. 7. Administrar CMS (Sistema de gestión de contenidos) cargando contenido</p>
         </div>
         <div class="buttons-arrows">
-            <button>
+            <button id="arrow-left-2">
                 <!--Arrow left-->
                 <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-4.828 11.5l4.608 3.763-.679.737-6.101-5 6.112-5 .666.753-4.604 3.747h11.826v1h-11.828z"/></svg>
             </button>
-            <button>
+            <button id="arrow-right-2">
                 <!--Arrow right-->
                 <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c-6.623 0-12 5.377-12 12s5.377 12 12 12 12-5.377 12-12-5.377-12-12-12zm0 1c-6.071 0-11 4.929-11 11s4.929 11 11 11 11-4.929 11-11-4.929-11-11-11zm4.828 11.5l-4.608 3.763.679.737 6.101-5-6.112-5-.666.753 4.604 3.747h-11.826v1h11.828z"/></svg>
             </button>
@@ -130,7 +123,14 @@
     <section class="section-projects" id="projects">
         <div>
         <h2 class="underline-titles">Proyectos academicos</h2>
-        nombre proyecto: <a href="">Link</a>
+        <ol>
+            <li><a href="https://juankh993.github.io/counter/" target="_blank">Contador</a></li>
+            <li><a href="https://juankh993.github.io/color-flipper/" target="_blank">Paleta de colores</a></li>
+            <li><a href="https://juankh993.github.io/carrousel-reviews/" target="_blank">Carrusel de revisiones</a></li>
+            <li><a href="https://juankh993.github.io/Front-Mentor-HTML-CSS/" target="_blank">HTML y CSS responsive</a></li>
+            <li><a href="https://juankh993.github.io/Tribute-Page-Freecodecamp/" target="_blank">Página de tributo</a></li>
+            <li><a href="https://juankh993.github.io/survey_form_fcc/" target="_blank">Formulario de encuesta</a></li>
+        </ol>
     </div>
     </section>
 </main>

@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: #432E54;
 }
 body {
   font-family: sans-serif, Arial, Helvetica, Tahoma;
@@ -32,6 +33,15 @@ header {
   display: flex;
 } */
 
+a {
+  text-decoration: none;
+  color: #4B4376;
+}
+
+a:hover {
+  background: #E8BCB9;
+}
+
 header nav ul {
   display: flex;
   gap: 10px;
@@ -45,6 +55,11 @@ nav li {
 
 nav li a {
   text-decoration: none;
+}
+
+svg:hover {
+  background: #39cdcd;
+  border-radius: 50%;
 }
 
 #open-button,
@@ -71,9 +86,13 @@ header .brand img {
   gap: 10px;
   padding: 30px 0;
 }
+
 .photo-profile img{
+  width: 200px;
+  heigth: auto;
   border-radius: 100%;
   object-fit: fill;
+  border: .5px solid;
 }
 .links {
 display: flex;
@@ -106,9 +125,16 @@ main {
   text-underline-offset: 7px;
   text-decoration-thickness: 3px;
 }
-section .title-experience p{
+section .title-experience h3{
   font-size: 24px;
   font-weight: bold;
+  padding-bottom: 15px;
+}
+.experience p:first-of-type {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+  color: gold;
 }
 .experience {
   display: flex;
@@ -144,6 +170,13 @@ section .title-studies p{
 section .studies {
   padding-bottom: 30px;
 }
+
+#university {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+  color: gold;
+}
 .section-experience {
   width: 80vw;
   margin: auto;
@@ -153,6 +186,14 @@ section .studies {
   margin: auto;
   padding: 20px 0;
 }
+.section-projects h2 {
+  padding-bottom: 15px;
+}
+.section-projects ol {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 footer {
   width: 100%;
   background: #0c0c0c;
@@ -160,6 +201,11 @@ footer {
   text-align: center;
   padding: 30px;
 }
+
+footer h3 {
+  color: #fff;
+}
+
 footer .contact-us {
   padding-bottom: 20px;
   font-size: 20px;
@@ -171,7 +217,7 @@ footer .contact-us {
 }
 .buttons-arrows {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   gap: 10px;
   padding-top: 15px;
 }

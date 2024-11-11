@@ -2,6 +2,7 @@
 const nav = document.querySelector(".buttons-container");
 const open = document.getElementById("open-button");
 const close = document.getElementById("close-button");
+
 open.addEventListener("click", function(){
     nav.classList.toggle("visible");
    
@@ -49,13 +50,13 @@ const studies = [
 const experience = [
     {
         id: 1,
-        company: "AXITY",
-        job: "Analista de operaciones junior",
-        area: "Data center",
-        duration: "enero 2022 - mayo 2023",
-        lead: "Edwin José Parra",
-        phone: "6381800",
-        functions: "Realizar monitoreo a servidores a través de la web nagios validando que no se llene ningún volumen, ni que se detengan los servicios Resolver caso de mesa de ayuda nivel 2, realizar copias de seguridad de la información a ciertas horas del día, manejando librería IBM TS3200 y TSM4300. Ejecutar scripts en SQL SERVER que envían los desarrolladores, estar validando que no se generen bloqueos en las bases de datos, ejecutar consultas SQL y varias tareas que se deben realizar durante el turno en los servidores"
+        company: "FLARE SAS",
+        job: "HTML Developer",
+        area: "Desarrollo de software",
+        duration: "mayo 2023 - actualmente",
+        lead: "Andres Barreto",
+        phone: "3298181",
+        functions: "Escribir código semántico y estructurado en HTML para definir la estructura de una página web \n 2. Estilizar las páginas web utilizando hojas de estilo en cascada (CSS) para lograr el diseño deseado \n 3. Implementar la lógica del lado del cliente utilizando JavaScript para mejorar la interactividad y la experiencia del usuario. \n 4. Garantizar la compatibilidad entre diferentes navegadores y dispositivos. \n 5. Utilizar frameworks front-end (marco de trabajo) como Tailwind, Bootstrap y/o flowbite para facilitar el desarrollo y mejorar la eficiencia. \n 6. Diseñar y desarrollar sitios web que se adapten y sean funcionales en dispositivos y diferentes pantallas. \n 7. Administrar CMS (Sistema de gestión de contenidos) cargando contenido"
     },
     {
         id: 2,
@@ -106,9 +107,121 @@ const experience = [
         lead: "Yeison Quiroga",
         phone: "5940000",
         functions: "Atender clientes vía telefónica para la campaña de claro hogar, realizando soporte técnico a fallas y/o configuraciones para telefonía fija, televisión e internet."
+    },
+    {
+        id: 7,
+        company: "AXITY",
+        job: "Analista de operaciones junior",
+        area: "Data center",
+        duration: "enero 2022 - mayo 2023",
+        lead: "Edwin José Parra",
+        phone: "6381800",
+        functions: "Realizar monitoreo a servidores a través de la web nagios validando que no se llene ningún volumen, ni que se detengan los servicios Resolver caso de mesa de ayuda nivel 2, realizar copias de seguridad de la información a ciertas horas del día, manejando librería IBM TS3200 y TSM4300. Ejecutar scripts en SQL SERVER que envían los desarrolladores, estar validando que no se generen bloqueos en las bases de datos, ejecutar consultas SQL y varias tareas que se deben realizar durante el turno en los servidores"
     }
 ];
 
-console.log(experience);
+const arrowLeft = document.getElementById("arrow-left");
+const arrowRight = document.getElementById("arrow-right");
+
+
+let studiesIndex = 0;
+
+const placeStudie = document.getElementById("university");
+const certificate = document.getElementById("certificate");
+const durationStudie = document.getElementById("duration");
+const cityStudie = document.getElementById("city-certificate");
+
+//window.addEventListener("DOMContentLoaded", ()=>{
+    function studieData(studiesIndex) {
+        const studiesItem = studies[studiesIndex];
+        placeStudie.textContent = studiesItem.school;
+        certificate.textContent = studiesItem.career;
+        duration.textContent = studiesItem.state;
+        cityStudie.textContent = studiesItem.city;
+        studiesIndex++;
+    }
+//});
+
+//function renderDataStudies(studies) {
+    const dataStudies = document.getElementById(".data-studies");
+
+
+    if (studies < 0) {
+        studiesIndex = studies.length - 1
+        studieData(studiesIndex);
+    }
+
+    // for (let studiesIndex = 0; studiesIndex < studies.length; studiesIndex++) {
+    //     studiesIndex = document.createElement("p");
+    //     studiesIndex.textContent = '${studies.school}';
+    //     console.log(dataStudies);
+    // }
+    
+//}
+
+
+arrowLeft.addEventListener("click", function(){
+    studiesIndex--;
+    if (studiesIndex < 0) {
+        studiesIndex = studies.length - 1
+    }
+    studieData(studiesIndex);
+});
+arrowRight.addEventListener("click", function(){
+    studiesIndex++;
+    if (studiesIndex > studies.length - 1) {
+        studiesIndex = 0;
+    }
+    studieData(studiesIndex);
+});
+
+// jobs
+
+const company = document.getElementById("company");
+const role = document.getElementById("role");
+const area = document.getElementById("area-job");
+const timeWorked = document.getElementById("time-worked");
+const lead = document.getElementById("lead");
+const phone = document.getElementById("phone");
+const functionsJob = document.getElementById("functions");
+
+// arrows
+
+const leftExperience = document.getElementById("arrow-left-2");
+const rightExperience = document.getElementById("arrow-right-2");
+
+let experienceJobs = 0;
+
+
+function experienceData (experienceJobs) {
+    const experienceItem = experience[experienceJobs];
+    company.textContent = experienceItem.company;
+    role.textContent = experienceItem.job;
+    area.textContent = experienceItem.area;
+    timeWorked.textContent = experienceItem.direction;
+    lead.textContent = experienceItem.lead;
+    phone.textContent = experienceItem.phone;
+    functionsJob.textContent = experienceItem.functions;
+    experienceJobs++;
+}
+
+const dataExperience = document.getElementById(".data-jobs");
+
+
+leftExperience.addEventListener("click", function(){
+    experienceJobs--;
+    if (experienceJobs < 0) {
+        experienceJobs = experience.length - 1
+    }
+    experienceData(experienceJobs);
+});
+
+rightExperience.addEventListener("click", function(){
+    experienceJobs++;
+    if (experienceJobs > studies.length - 1) {
+        experienceJobs = 0;
+    }
+    experienceData(experienceJobs);
+});
 
 
